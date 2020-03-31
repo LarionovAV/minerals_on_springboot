@@ -1,0 +1,79 @@
+#header{
+  background-color: #000000;
+  align-content: center;
+}
+
+body{
+  background-color: #333333;
+}
+.menu-btn-1{
+  cursor: pointer;
+  color: white;
+  background-color: #666666;
+  align-content: center;
+  border-style: solid;
+  border-color: #06266F;
+  text-align: center;
+  vertical-align: middle;
+}
+#header-menu{
+  width: 70%;
+}
+.navbar{
+  width: 100%;
+}
+.mainContent{
+  background-color: #aaaaaa;
+
+}
+#Welcome{
+  color: white;
+  font-size: 22pt;
+}
+#feedback-info{
+  color: white;
+  font-size: 14pt;
+}
+.card{
+  text-align: center;
+  width: 125%;
+  margin: 10px;
+  padding: 10px;
+  color: #888888;
+}
+.mineral-info{
+  color: white;
+  margin: 10px;
+}
+img.in-text{
+  float: left;
+  margin: 10px;
+  margin-top: 0;
+}
+.text-in-center{
+  text-align: center;
+  color: white;
+}
+.list{
+  width: 100%;
+  background-color: inherit;
+}
+.list ul.group-list{
+  color: black;
+  padding: 0;
+}
+.call-modal-btn{
+  float: right;
+  margin-right: 20px;
+}
+#feedback-info p{
+  margin: 10px;
+}
+
+.hidden{
+  visibility: hidden;
+}
+
+.not-hidden{
+  visibility: visible;
+}

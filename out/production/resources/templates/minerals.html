@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8">
+    <title>Минералы</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/bootstrap/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/css/custom/style.css}">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script th:src="@{/js/bootstrap.min.js}" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container" id="header">
+          <nav role="navigation" class="navbar navbar-expand-md navbar-dark bg-dark justify-comtemt-center">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarNav" class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                  <li class="nav-item col-3-lg" ><a class="nav-link" th:href="@{/}">Главная</a></li>
+                  <li class="nav-item col-3-lg active"><a class="nav-link" th:href="@{/minerals}">Список минералов</a></li>
+                  <li class="nav-item col-3-lg"><a class="nav-link" th:href="@{/feedback}">Контакты</a></li>
+                  <li class="nav-item col-3-lg"><a class="nav-link" th:href="@{/about}">О нас</a></li>
+                </ul>
+            </div>
+
+          </nav>
+    </div>
+    <br>
+    <div id="mainContent">
+      <div class="row">
+        <div class="col-lg-3 col-md-2 hidden-sm hidden-xs"></div>
+        <div class="col-lg-6">
+          <div class="message" id="Welcome">
+            <div class="row">
+              <div th:each="min, iter : ${mineralsList}" class="col-lg-3 col-md-3 col-sm-5 col-xs-5 mineral-info">
+                <div class="card">
+                  <img class="card-img-top" th:src="@{'/img/minerals/' + ${min.getName()} + '.jpg'} " th:alt="${min.getName()}">
+                  <div class="card-body">
+                    <h4 class="card-title" th:text="${min.getName()}"></h4>
+                    <a th:href="@{'/minerals/' + ${min.getMinID()}}" class="btn btn-primary">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary call-modal-btn" data-toggle="modal" data-target="#addRecord">
+        Добавить запись
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="addRecord" tabindex="-1" role="dialog" aria-labelledby="addRecord" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="addRecordLabel">Новый минерал</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form th:object="${newMineral}" action="/minerals" method="post" id="addForm">
+                <div class="form-group">
+                  <label for="mineralNameInput">Название минерала</label>
+                  <input type="text" class="form-control" id="mineralNameInput" th:field="*{name}">
+                </div>
+                <div class="form-group">
+                  <label for="mineralDescription">Описание</label>
+                  <textarea class="form-control" id="mineralDescription" th:field="*{description}"></textarea>
+                  <br>
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="customFile">
+                    <label class="custom-file-label" for="customFile">Загрузить изображение</label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="fields">Месторождения</label>
+                  <textarea class="form-control" id="fields" aria-describedby="fieldsHelp" th:field="*{fields}"></textarea>
+                  <small id="fieldsHelp" class="form-text text-muted">Вводите месторождения построчно.</small>
+                </div>
+                <div class="form-group">
+                  <label for="ores">Руда, содержащая минерал</label>
+                  <select class="form-control" id="ores" aria-describedby="oresHelp" th:field="*{oreOfMineral}"
+                          onchange="document.getElementById('newOreName').setAttribute('type', (this.options[this.selectedIndex].value == '')? 'text' : 'hidden');">
+                    <option selected th:value="''">Новая руда</option>
+                    <option th:each="ore, itter : ${oreList}" th:value="${ore.getName()}" th:text="${ore.getName()}"></option>
+                  </select>
+                  <br>
+                  <input id="newOreName" th:field="*{newOreName}">
+                  <small id="oresHelp" class="form-text text-muted">Выберите руду из списка или введите новую</small>
+                </div>
+
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+              <button type="button" class="btn btn-primary" onclick="document.getElementById('addForm').submit()">Сохранить</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
