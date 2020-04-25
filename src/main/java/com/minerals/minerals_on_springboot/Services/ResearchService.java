@@ -41,7 +41,7 @@ public class ResearchService {
         if (researchForm.getResearcher_3() == -1)
             newResCount++;
         else
-            researchers.add(researcherRepo.findById(researchForm.getResearcher_2()).get());
+            researchers.add(researcherRepo.findById(researchForm.getResearcher_3()).get());
 
         String[] newRes = researchForm.getNewResqarchers().split(",");
 
@@ -56,11 +56,35 @@ public class ResearchService {
         return researchRepo.saveAndFlush(newResearch);
     }
 
-    public void update(Integer researchId, Set<Researcher> updatedResearchers, String updatedText){
+    public void update(Integer researchId, ResearchForm rForm){
         Research research = researchRepo.findById(researchId).get();
+        research.setText(rForm.getText());
         research.getResearchers().clear();
-        research.getResearchers().addAll(updatedResearchers);
-        research.setText(updatedText);
+        List<Researcher> researchers = new ArrayList<>();
+        int newResCount = 0;
+        if (rForm.getResearcher_1() == -1)
+            newResCount++;
+        else
+            researchers.add(researcherRepo.findById(rForm.getResearcher_1()).get());
+
+        if (rForm.getResearcher_2() == -1)
+            newResCount++;
+        else
+            researchers.add(researcherRepo.findById(rForm.getResearcher_2()).get());
+
+        if (rForm.getResearcher_3() == -1)
+            newResCount++;
+        else
+            researchers.add(researcherRepo.findById(rForm.getResearcher_3()).get());
+
+        String[] newRes = rForm.getNewResqarchers().split(",");
+        for (int i = 0; i < newRes.length && newResCount > 0; i++, newResCount--){
+            String name = newRes[i].trim();
+            if (!name.isEmpty())
+                researchers.add(researcherService.create(name));
+        }
+        research.setResearchers(researchers);
+
         researchRepo.saveAndFlush(research);
     }
 

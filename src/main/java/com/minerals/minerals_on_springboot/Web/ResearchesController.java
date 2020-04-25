@@ -74,4 +74,18 @@ public class ResearchesController {
         researchService.create(mineralRepo.findById(minId).get(), resForm);
         return "redirect:/minerals/updateResearches/" + minId;
     }
+
+    @PostMapping("/minerals/updateResearches/{minId}/{resId}")
+    public String updResearch(
+            @PathVariable("minId") Integer minId,
+            @PathVariable("resId") Integer resId,
+            @RequestParam("opType") String opType,
+            @ModelAttribute("selectedResearch") ResearchForm resForm
+    ){
+        if (opType.equals("update"))
+            researchService.update(resId, resForm);
+        else if (opType.equals("delete"))
+            researchService.delete(resId);
+        return "redirect:/minerals/updateResearches/" + minId;
+    }
 }

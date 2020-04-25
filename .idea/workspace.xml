@@ -5,36 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7aa57c2-eaa3-4d58-b1ad-84317bb81491" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minerals/minerals_on_springboot/Config/Authentication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minerals/minerals_on_springboot/Model/Forms/ResearchForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minerals/minerals_on_springboot/Web/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minerals/minerals_on_springboot/Web/ResearchesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/researchesUpdatePage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/css/custom/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/static/css/custom/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/img/minerals/Аметист.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/img/minerals/Корунд.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/img/minerals/Малахит.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/minerals.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/minerals.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/singleMineralInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/singleMineralInfo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minerals/minerals_on_springboot/Model/Research.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minerals/minerals_on_springboot/Model/Research.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minerals/minerals_on_springboot/Services/MineralService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minerals/minerals_on_springboot/Services/MineralService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/feedback.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/feedback.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/minerals/minerals_on_springboot/Services/ResearchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minerals/minerals_on_springboot/Services/ResearchService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minerals/minerals_on_springboot/Web/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minerals/minerals_on_springboot/Web/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minerals/minerals_on_springboot/Web/MineralsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minerals/minerals_on_springboot/Web/MineralsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/custom/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/custom/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/minerals/Аметист.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/minerals/image_for_1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/minerals/Корунд.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/minerals/image_for_2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/minerals/Малахит.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/minerals/image_for_3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/feedback.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/feedback.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/minerals.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/minerals.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/singleMineralInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/singleMineralInfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minerals/minerals_on_springboot/Web/ResearchesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minerals/minerals_on_springboot/Web/ResearchesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/researchesUpdatePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/researchesUpdatePage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,12 +169,24 @@
       <workItem from="1587477777305" duration="7306000" />
       <workItem from="1587486181976" duration="1292000" />
       <workItem from="1587794097464" duration="18023000" />
-      <workItem from="1587822116071" duration="12968000" />
+      <workItem from="1587822116071" duration="17994000" />
     </task>
+    <task id="LOCAL-00001" summary="Last-ver-26.04.20">
+      <created>1587838024787</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1587838024787</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Last-ver-26.04.20" />
+    <option name="LAST_COMMIT_MESSAGE" value="Last-ver-26.04.20" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="76" key="#Assign_Data_Sources" timestamp="1582218465576">
@@ -236,74 +225,82 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="599" y="170" key="#xdebugger.XInspectDialog/0.0.1536.834@0.0.1536.834" timestamp="1583662789797" />
-    <state x="355" y="12" key="CommitChangelistDialog2" timestamp="1587837943222">
+    <state x="355" y="12" key="CommitChangelistDialog2" timestamp="1587838012939">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="355" y="12" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1587837943222" />
-    <state width="462" height="466" key="DebuggerActiveHint" timestamp="1587817304755">
+    <state x="355" y="12" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1587838012939" />
+    <state width="462" height="466" key="DebuggerActiveHint" timestamp="1587844907458">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="462" height="466" key="DebuggerActiveHint/0.0.1536.834@0.0.1536.834" timestamp="1587817304755" />
+    <state width="462" height="466" key="DebuggerActiveHint/0.0.1536.834@0.0.1536.834" timestamp="1587844907458" />
     <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1582048724568">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1582048724568" />
-    <state width="1493" height="233" key="GridCell.Tab.0.bottom" timestamp="1587837943335">
+    <state width="1493" height="233" key="GridCell.Tab.0.bottom" timestamp="1587845040302">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="233" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1587837943335" />
-    <state width="1493" height="233" key="GridCell.Tab.0.center" timestamp="1587837943335">
+    <state width="1493" height="233" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1587845040302" />
+    <state width="1493" height="233" key="GridCell.Tab.0.center" timestamp="1587845040301">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="233" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1587837943335" />
-    <state width="1493" height="233" key="GridCell.Tab.0.left" timestamp="1587837943335">
+    <state width="1493" height="233" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1587845040301" />
+    <state width="1493" height="233" key="GridCell.Tab.0.left" timestamp="1587845040301">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="233" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1587837943335" />
-    <state width="1493" height="233" key="GridCell.Tab.0.right" timestamp="1587837943335">
+    <state width="1493" height="233" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1587845040301" />
+    <state width="1493" height="233" key="GridCell.Tab.0.right" timestamp="1587845040302">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="233" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1587837943335" />
-    <state width="1493" height="233" key="GridCell.Tab.1.bottom" timestamp="1587837943336">
+    <state width="1493" height="233" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1587845040302" />
+    <state width="1493" height="233" key="GridCell.Tab.1.bottom" timestamp="1587845125567">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="233" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1587837943336" />
-    <state width="1493" height="233" key="GridCell.Tab.1.center" timestamp="1587837943336">
+    <state width="1493" height="233" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1587845125567" />
+    <state width="1493" height="233" key="GridCell.Tab.1.center" timestamp="1587845125565">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="233" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1587837943336" />
-    <state width="1493" height="233" key="GridCell.Tab.1.left" timestamp="1587837943336">
+    <state width="1493" height="233" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1587845125565" />
+    <state width="1493" height="233" key="GridCell.Tab.1.left" timestamp="1587845125565">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="233" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1587837943336" />
-    <state width="1493" height="233" key="GridCell.Tab.1.right" timestamp="1587837943336">
+    <state width="1493" height="233" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1587845125565" />
+    <state width="1493" height="233" key="GridCell.Tab.1.right" timestamp="1587845125566">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="233" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1587837943336" />
-    <state width="1493" height="233" key="GridCell.Tab.2.bottom" timestamp="1587837943336">
+    <state width="1493" height="233" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1587845125566" />
+    <state width="1493" height="233" key="GridCell.Tab.2.bottom" timestamp="1587845040055">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="233" key="GridCell.Tab.2.bottom/0.0.1536.834@0.0.1536.834" timestamp="1587837943336" />
-    <state width="1493" height="233" key="GridCell.Tab.2.center" timestamp="1587837943336">
+    <state width="1493" height="233" key="GridCell.Tab.2.bottom/0.0.1536.834@0.0.1536.834" timestamp="1587845040055" />
+    <state width="1493" height="233" key="GridCell.Tab.2.center" timestamp="1587845040055">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="233" key="GridCell.Tab.2.center/0.0.1536.834@0.0.1536.834" timestamp="1587837943336" />
-    <state width="1493" height="233" key="GridCell.Tab.2.left" timestamp="1587837943336">
+    <state width="1493" height="233" key="GridCell.Tab.2.center/0.0.1536.834@0.0.1536.834" timestamp="1587845040055" />
+    <state width="1493" height="233" key="GridCell.Tab.2.left" timestamp="1587845040055">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="233" key="GridCell.Tab.2.left/0.0.1536.834@0.0.1536.834" timestamp="1587837943336" />
-    <state width="1493" height="233" key="GridCell.Tab.2.right" timestamp="1587837943336">
+    <state width="1493" height="233" key="GridCell.Tab.2.left/0.0.1536.834@0.0.1536.834" timestamp="1587845040055" />
+    <state width="1493" height="233" key="GridCell.Tab.2.right" timestamp="1587845040055">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="233" key="GridCell.Tab.2.right/0.0.1536.834@0.0.1536.834" timestamp="1587837943336" />
+    <state width="1493" height="233" key="GridCell.Tab.2.right/0.0.1536.834@0.0.1536.834" timestamp="1587845040055" />
     <state width="189" height="457" key="HiddenNamespacesPopup" timestamp="1582048673379">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="189" height="457" key="HiddenNamespacesPopup/0.0.1536.834@0.0.1536.834" timestamp="1582048673379" />
+    <state x="503" y="128" key="RollbackChangesDialog" timestamp="1587842997854">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="503" y="128" key="RollbackChangesDialog/0.0.1536.834@0.0.1536.834" timestamp="1587842997854" />
     <state x="277" y="60" key="SettingsEditor" timestamp="1582778485829">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="277" y="60" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1582778485829" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1587839880020">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1587839880020" />
     <state width="775" height="424" key="XDebugger.FullValuePopup" timestamp="1587388465311">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -330,6 +327,15 @@
     <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1587802735173" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/minerals/minerals_on_springboot/Web/ResearchesController.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="SpringBootApplicationConfigurationType">
         <watch expression="&quot;redirect:/minerals/&quot; + form.getId()" />

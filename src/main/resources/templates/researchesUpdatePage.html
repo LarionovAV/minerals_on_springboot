@@ -135,6 +135,7 @@
                         method="post"
                         th:action="'/minerals/updateResearches/' + ${displayedMineral.getMinID()} + '/' + ${resId}"
                 >
+                    <input type="hidden" name="opType" value="update">
                     <div class="row form-group">
                         <div class="col-1"></div>
                         <div class="text-in-center">
@@ -186,6 +187,13 @@
                         <label for="resText" style="color: whitesmoke">Текст исследования</label>
                         <textarea class="form-control" id="selResText" th:field="${selectedResearch.text}"></textarea>
                     </div>
+                    <div class="form-group">
+                        <button class="btn-primary" onclick="document.getElementById('delSelected').submit()">Удалить</button>
+                        <button class="btn-primary" onclick="document.getElementById('selectedResInfo').submit()">Сохранить</button>
+                    </div>
+                </form>
+                <form id="delSelected" th:action="'/minerals/updateResearches/' + ${minId} + '/' + ${resId}" method="post">
+                    <input type="hidden" name="opType" value="delete">
                 </form>
 
             </div>
