@@ -77,3 +77,53 @@ img.in-text{
 .not-hidden{
   visibility: visible;
 }
+
+.lightBG{
+  background: #6666ff;
+  color: black;
+}
+.darkBG{
+  background: #00008b;
+  color: whitesmoke;
+}
+
+input.newItems{
+  width: -webkit-fill-available;
+}
+
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 1px;
+}
+
+.res-list-item{
+  border-radius: 5px;
+  text-align: center;
+  align-content: center;
+  alignment: center;
+}
+
+#pwd{
+  align-self: center;
+  border-radius: 10px;
+  width: 256px;
+  height: 30px;
+  font-size: 25px;
+}
+
+#pwdlabel{
+  alignment: center;
+  color: whitesmoke;
+}
+
+.pwd-parent{
+  align-content: center;
+  alignment: center;
+  child-align: middle;
+  justify-content: center;
+}
+
+.pwd-form-group{
+  text-align: center;
+}

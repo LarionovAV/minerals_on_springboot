@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>Минералы</title>
     <link rel="stylesheet" th:href="@{/css/bootstrap/bootstrap.min.css}">
-    <link rel="stylesheet" th:href="@{/static/css/bootstrap/bootstrap.css}">
-    <link rel="stylesheet" th:href="@{/static/css/custom/style.css}">
+    <link rel="stylesheet" th:href="@{/css/bootstrap/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/css/custom/style.css}">
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script th:src="@{js/bootstrap.min.js}" crossorigin="anonymous"></script>
@@ -23,6 +23,7 @@
                     <li class="nav-item col-3-lg"><a class="nav-link" th:href="@{/minerals}">Список минералов</a></li>
                     <li class="nav-item col-3-lg"><a class="nav-link" th:href="@{/feedback}">Контакты</a></li>
                     <li class="nav-item col-3-lg"><a class="nav-link" th:href="@{/about}">О нас</a></li>
+                    <li class="nav-item col-3-lg"><a class="nav-link" th:href="@{/login}" th:text="${auth}? 'Выйти' : 'Войти'"></a></li>
                 </ul>
             </div>
 

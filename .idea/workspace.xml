@@ -4,7 +4,38 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7aa57c2-eaa3-4d58-b1ad-84317bb81491" name="Default Changelist" comment="" />
+    <list default="true" id="d7aa57c2-eaa3-4d58-b1ad-84317bb81491" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minerals/minerals_on_springboot/Config/Authentication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minerals/minerals_on_springboot/Model/Forms/ResearchForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minerals/minerals_on_springboot/Web/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minerals/minerals_on_springboot/Web/ResearchesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/researchesUpdatePage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/static/css/custom/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/static/css/custom/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/static/img/minerals/Аметист.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/static/img/minerals/Корунд.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/static/img/minerals/Малахит.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/minerals.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/minerals.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/singleMineralInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/singleMineralInfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minerals/minerals_on_springboot/Model/Research.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minerals/minerals_on_springboot/Model/Research.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minerals/minerals_on_springboot/Services/MineralService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minerals/minerals_on_springboot/Services/MineralService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minerals/minerals_on_springboot/Services/ResearchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minerals/minerals_on_springboot/Services/ResearchService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minerals/minerals_on_springboot/Web/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minerals/minerals_on_springboot/Web/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minerals/minerals_on_springboot/Web/MineralsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minerals/minerals_on_springboot/Web/MineralsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/custom/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/custom/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/minerals/Аметист.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/minerals/image_for_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/minerals/Корунд.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/minerals/image_for_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/minerals/Малахит.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/minerals/image_for_3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/feedback.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/feedback.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/minerals.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/minerals.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/singleMineralInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/singleMineralInfo.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,11 +107,23 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="D:\Git\minerals_on_springboot\.idea" />
+      </set>
+    </option>
+  </component>
   <component name="ProjectId" id="1XzPxu4FHlW7LjC7MrMsCH1vi8n" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -88,10 +131,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="C:/Program Files/Android" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -138,7 +183,16 @@
       <workItem from="1583750021675" duration="5414000" />
       <workItem from="1583799691661" duration="1651000" />
       <workItem from="1583809218337" duration="475000" />
-      <workItem from="1585665846900" duration="2076000" />
+      <workItem from="1585665846900" duration="5220000" />
+      <workItem from="1587202612263" duration="1134000" />
+      <workItem from="1587373997880" duration="124000" />
+      <workItem from="1587375494665" duration="20200000" />
+      <workItem from="1587405959001" duration="857000" />
+      <workItem from="1587448808069" duration="20728000" />
+      <workItem from="1587477777305" duration="7306000" />
+      <workItem from="1587486181976" duration="1292000" />
+      <workItem from="1587794097464" duration="18023000" />
+      <workItem from="1587822116071" duration="12968000" />
     </task>
     <servers />
   </component>
@@ -162,74 +216,86 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="76" width="873" height="682" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1583087964860" />
-    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1583584067441">
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1587825516295">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1583584067441" />
-    <state x="379" y="343" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1582774351762">
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1587825516295" />
+    <state x="379" y="343" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1587386829198">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="379" y="343" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.834@0.0.1536.834" timestamp="1582774351762" />
+    <state x="379" y="343" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.834@0.0.1536.834" timestamp="1587386829198" />
+    <state x="553" y="277" width="475" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1587386103712">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="553" y="277" width="475" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.834@0.0.1536.834" timestamp="1587386103712" />
+    <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587799955795">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834@0.0.1536.834" timestamp="1587799955795" />
     <state x="599" y="170" key="#xdebugger.XInspectDialog" timestamp="1583662789797">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="599" y="170" key="#xdebugger.XInspectDialog/0.0.1536.834@0.0.1536.834" timestamp="1583662789797" />
-    <state width="462" height="466" key="DebuggerActiveHint" timestamp="1583663468550">
+    <state x="355" y="12" key="CommitChangelistDialog2" timestamp="1587837943222">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="462" height="466" key="DebuggerActiveHint/0.0.1536.834@0.0.1536.834" timestamp="1583663468550" />
+    <state x="355" y="12" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1587837943222" />
+    <state width="462" height="466" key="DebuggerActiveHint" timestamp="1587817304755">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="462" height="466" key="DebuggerActiveHint/0.0.1536.834@0.0.1536.834" timestamp="1587817304755" />
     <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1582048724568">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1582048724568" />
-    <state width="1493" height="2" key="GridCell.Tab.0.bottom" timestamp="1583812809871">
+    <state width="1493" height="233" key="GridCell.Tab.0.bottom" timestamp="1587837943335">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="2" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1583812809871" />
-    <state width="1493" height="2" key="GridCell.Tab.0.center" timestamp="1583812809871">
+    <state width="1493" height="233" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1587837943335" />
+    <state width="1493" height="233" key="GridCell.Tab.0.center" timestamp="1587837943335">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="2" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1583812809871" />
-    <state width="1493" height="2" key="GridCell.Tab.0.left" timestamp="1583812809871">
+    <state width="1493" height="233" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1587837943335" />
+    <state width="1493" height="233" key="GridCell.Tab.0.left" timestamp="1587837943335">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="2" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1583812809871" />
-    <state width="1493" height="2" key="GridCell.Tab.0.right" timestamp="1583812809871">
+    <state width="1493" height="233" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1587837943335" />
+    <state width="1493" height="233" key="GridCell.Tab.0.right" timestamp="1587837943335">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="2" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1583812809871" />
-    <state width="1493" height="2" key="GridCell.Tab.1.bottom" timestamp="1583812809871">
+    <state width="1493" height="233" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1587837943335" />
+    <state width="1493" height="233" key="GridCell.Tab.1.bottom" timestamp="1587837943336">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="2" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1583812809871" />
-    <state width="1493" height="2" key="GridCell.Tab.1.center" timestamp="1583812809871">
+    <state width="1493" height="233" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1587837943336" />
+    <state width="1493" height="233" key="GridCell.Tab.1.center" timestamp="1587837943336">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="2" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1583812809871" />
-    <state width="1493" height="2" key="GridCell.Tab.1.left" timestamp="1583812809871">
+    <state width="1493" height="233" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1587837943336" />
+    <state width="1493" height="233" key="GridCell.Tab.1.left" timestamp="1587837943336">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="2" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1583812809871" />
-    <state width="1493" height="2" key="GridCell.Tab.1.right" timestamp="1583812809871">
+    <state width="1493" height="233" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1587837943336" />
+    <state width="1493" height="233" key="GridCell.Tab.1.right" timestamp="1587837943336">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="2" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1583812809871" />
-    <state width="1493" height="265" key="GridCell.Tab.2.bottom" timestamp="1583665443237">
+    <state width="1493" height="233" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1587837943336" />
+    <state width="1493" height="233" key="GridCell.Tab.2.bottom" timestamp="1587837943336">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.2.bottom/0.0.1536.834@0.0.1536.834" timestamp="1583665443237" />
-    <state width="1493" height="265" key="GridCell.Tab.2.center" timestamp="1583665443236">
+    <state width="1493" height="233" key="GridCell.Tab.2.bottom/0.0.1536.834@0.0.1536.834" timestamp="1587837943336" />
+    <state width="1493" height="233" key="GridCell.Tab.2.center" timestamp="1587837943336">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.2.center/0.0.1536.834@0.0.1536.834" timestamp="1583665443236" />
-    <state width="1493" height="265" key="GridCell.Tab.2.left" timestamp="1583665443236">
+    <state width="1493" height="233" key="GridCell.Tab.2.center/0.0.1536.834@0.0.1536.834" timestamp="1587837943336" />
+    <state width="1493" height="233" key="GridCell.Tab.2.left" timestamp="1587837943336">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.2.left/0.0.1536.834@0.0.1536.834" timestamp="1583665443236" />
-    <state width="1493" height="265" key="GridCell.Tab.2.right" timestamp="1583665443236">
+    <state width="1493" height="233" key="GridCell.Tab.2.left/0.0.1536.834@0.0.1536.834" timestamp="1587837943336" />
+    <state width="1493" height="233" key="GridCell.Tab.2.right" timestamp="1587837943336">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.2.right/0.0.1536.834@0.0.1536.834" timestamp="1583665443236" />
+    <state width="1493" height="233" key="GridCell.Tab.2.right/0.0.1536.834@0.0.1536.834" timestamp="1587837943336" />
     <state width="189" height="457" key="HiddenNamespacesPopup" timestamp="1582048673379">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -238,6 +304,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="277" y="60" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1582778485829" />
+    <state width="775" height="424" key="XDebugger.FullValuePopup" timestamp="1587388465311">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="775" height="424" key="XDebugger.FullValuePopup/0.0.1536.834@0.0.1536.834" timestamp="1587388465311" />
     <state x="485" y="59" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1583087910746">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -246,29 +316,30 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="465" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1582046931858" />
-    <state x="425" y="189" key="run.anything.popup" timestamp="1582780600703">
+    <state x="468" y="97" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1587825406654">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="425" y="189" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1582780600703" />
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1583661426984">
+    <state x="468" y="97" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.834@0.0.1536.834" timestamp="1587825406654" />
+    <state x="425" y="189" key="run.anything.popup" timestamp="1587833433460">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1583661426984" />
+    <state x="425" y="189" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1587833433460" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1587802735173">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1587802735173" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/minerals/minerals_on_springboot/Web/MineralsController.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="SpringBootApplicationConfigurationType">
         <watch expression="&quot;redirect:/minerals/&quot; + form.getId()" />
         <watch expression="mineralRepo.findByName(&quot;Test UPD&quot;)" language="JAVA" />
+        <watch expression="created" language="JAVA" />
+        <watch expression="created.exists();" />
+        <watch expression="getClass().getClassLoader().getResource(&quot;static/img/minerals/image_for_1.jpg&quot;).toURI()" language="JAVA" />
+        <watch expression="getClass().getClassLoader().getResource(&quot;static/img/minerals/image_for_39.jpg&quot;)" language="JAVA" />
+        <watch expression="added.getMinID()" />
+        <watch expression="&quot;static/img/minerals/image_for_&quot; + added.getMinID() + &quot;.jpg&quot;" />
       </configuration>
     </watches-manager>
   </component>

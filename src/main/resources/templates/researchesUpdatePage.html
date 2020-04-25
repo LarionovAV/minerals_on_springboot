@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title th:text="${displayedMineral.getName()}"></title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/bootstrap/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/css/custom/style.css}">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="/js/bootstrap.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container" id="header">
+    <nav role="navigation" class="navbar navbar-expand-md navbar-dark bg-dark justify-comtemt-center">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbarNav" class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item col-3-lg" ><a class="nav-link" th:href="@{/}">Главная</a></li>
+                <li class="nav-item col-3-lg active"><a class="nav-link" th:href="@{/minerals}">Список минералов</a></li>
+                <li class="nav-item col-3-lg"><a class="nav-link" th:href="@{/feedback}">Контакты</a></li>
+                <li class="nav-item col-3-lg"><a class="nav-link" th:href="@{/about}">О нас</a></li>
+                <li class="nav-item col-3-lg"><a class="nav-link" th:href="@{/login}" th:text="${auth}? 'Выйти' : 'Войти'"></a></li>
+            </ul>
+        </div>
+
+    </nav>
+</div>
+<br>
+<div th:if="${auth}" id="mainContent" class="container" th:object="${displayedMineral}">
+    <div class="modal-header">
+        <button type="button" class="btn btn-primary call-modal-btn" data-toggle="modal" data-target="#addResearch">Создать</button>
+        <div class="modal fade" id="addResearch" tabindex="-1" role="dialog" aria-labelledby="addResearch" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addResearchLabel">Новое исследование</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form
+                                id="newRes"
+                                method="post"
+                                th:action="'/minerals/updateResearches/' + ${displayedMineral.getMinID()}"
+                        >
+                            <div class="row form-group">
+                                <div class="col-1"></div>
+                                <div class="text-in-center">
+                                    <a data-toggle="collapse" href="#researchers">
+                                        Исследователи
+                                    </a>
+                                </div>
+                                <div class="collapse container" id="researchers" th:object="${newResearch}">
+                                    <div class="row">
+                                        <select class="form-control" id="researcher_1" th:field="*{researcher_1}">
+                                            <option selected th:value="-1">Не выбрано</option>
+                                            <option
+                                                    th:each="res, itter : ${researchersList}"
+                                                    th:value="${res.getResearcherID()}"
+                                                    th:text="${res.getName()}">
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="row">
+                                        <select class="form-control" id="researcher_2" th:field="*{researcher_2}">
+                                            <option selected th:value="-1">Не выбрано</option>
+                                            <option
+                                                    th:each="res, itter : ${researchersList}"
+                                                    th:value="${res.getResearcherID()}"
+                                                    th:text="${res.getName()}">
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="row">
+                                        <select class="form-control" id="researcher_3" th:field="*{researcher_3}">
+                                            <option selected th:value="-1">Не выбрано</option>
+                                            <option
+                                                    th:each="res, itter : ${researchersList}"
+                                                    th:value="${res.getResearcherID()}"
+                                                    th:text="${res.getName()}">
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="row">
+                                        <input
+                                                type="text"
+                                                placeholder="Введите имена новых исследователей через запятую"
+                                                class="newItems"
+                                                th:field="*{newResqarchers}">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="resText">Текст исследования</label>
+                                <textarea class="form-control" id="resText" th:field="${newResearch.text}"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                        <button type="button" class="btn btn-primary" onclick="document.getElementById('newRes').submit()">Сохранить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="container col-lg-4 col-md-4 col-sm-3">
+            <ul>
+                <li th:each="res, iterStat : ${researchList}">
+                    <form
+                            th:id="'res' + ${iterStat.index}"
+                            th:action="'/minerals/updateResearches/' + *{getMinID()} + '/' + ${res.getResearchID()}"
+                    >
+                        <div
+                                class="res-list-item"
+                                th:classappend="${iterStat.odd}? 'lightBG' : 'darkBG'"
+                                th:text="${res.getResearchersInRow()}"
+                                th:onclick="'document.getElementById(\'res' + ${iterStat.index} + '\').submit();'"
+                        >
+                        </div>
+                    </form>
+                </li>
+            </ul>
+        </div>
+        <div class="container col-lg-8 col-md-8 col-sm-9">
+            <div th:if="${selectedResearch} != null">
+                <form
+                        id="selectedResInfo"
+                        method="post"
+                        th:action="'/minerals/updateResearches/' + ${displayedMineral.getMinID()} + '/' + ${resId}"
+                >
+                    <div class="row form-group">
+                        <div class="col-1"></div>
+                        <div class="text-in-center">
+                            <a data-toggle="collapse" href="#selResearchers">
+                                Исследователи
+                            </a>
+                        </div>
+                        <div class="collapse container" id="selResearchers" th:object="${selectedResearch}">
+                            <div class="row">
+                                <select class="form-control" id="selResearcher_1" th:field="*{researcher_1}">
+                                    <option selected th:value="-1">Не выбрано</option>
+                                    <option
+                                            th:each="res, itter : ${researchersList}"
+                                            th:value="${res.getResearcherID()}"
+                                            th:text="${res.getName()}">
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="row">
+                                <select class="form-control" id="selResearcher_2" th:field="*{researcher_2}">
+                                    <option selected th:value="-1">Не выбрано</option>
+                                    <option
+                                            th:each="res, itter : ${researchersList}"
+                                            th:value="${res.getResearcherID()}"
+                                            th:text="${res.getName()}">
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="row">
+                                <select class="form-control" id="selResearcher_3" th:field="*{researcher_3}">
+                                    <option selected th:value="-1">Не выбрано</option>
+                                    <option
+                                            th:each="res, itter : ${researchersList}"
+                                            th:value="${res.getResearcherID()}"
+                                            th:text="${res.getName()}">
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="row">
+                                <input
+                                        type="text"
+                                        placeholder="Введите имена новых исследователей через запятую"
+                                        class="newItems"
+                                        th:field="*{newResqarchers}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="resText" style="color: whitesmoke">Текст исследования</label>
+                        <textarea class="form-control" id="selResText" th:field="${selectedResearch.text}"></textarea>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -22,6 +22,7 @@
                   <li class="nav-item col-3-lg active"><a class="nav-link" th:href="@{/minerals}">Список минералов</a></li>
                   <li class="nav-item col-3-lg"><a class="nav-link" th:href="@{/feedback}">Контакты</a></li>
                   <li class="nav-item col-3-lg"><a class="nav-link" th:href="@{/about}">О нас</a></li>
+                  <li class="nav-item col-3-lg"><a class="nav-link" th:href="@{/login}" th:text="${auth}? 'Выйти' : 'Войти'"></a></li>
                 </ul>
             </div>
 
@@ -36,7 +37,7 @@
             <div class="row">
               <div th:each="min, iter : ${mineralsList}" class="col-lg-3 col-md-3 col-sm-5 col-xs-5 mineral-info">
                 <div class="card">
-                  <img class="card-img-top" th:src="@{'/img/minerals/' + ${min.getName()} + '.jpg'} " th:alt="${min.getName()}">
+                  <img class="card-img-top" th:src="@{'/img/minerals/image_for_' + ${min.getMinID()} + '.jpg'} " th:alt="${min.getName()}">
                   <div class="card-body">
                     <h4 class="card-title" th:text="${min.getName()}"></h4>
                     <a th:href="@{'/minerals/' + ${min.getMinID()}}" class="btn btn-primary">Подробнее</a>
@@ -50,7 +51,7 @@
 
 
       <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary call-modal-btn" data-toggle="modal" data-target="#addRecord">
+      <button th:if="${auth}" type="button" class="btn btn-primary call-modal-btn" data-toggle="modal" data-target="#addRecord">
         Добавить запись
       </button>
 
@@ -65,7 +66,7 @@
               </button>
             </div>
             <div class="modal-body">
-              <form th:object="${newMineral}" action="/minerals" method="post" id="addForm">
+              <form th:object="${newMineral}" action="/minerals" method="post" id="addForm" enctype="multipart/form-data">
                 <div class="form-group">
                   <label for="mineralNameInput">Название минерала</label>
                   <input type="text" class="form-control" id="mineralNameInput" th:field="*{name}">
@@ -75,7 +76,7 @@
                   <textarea class="form-control" id="mineralDescription" th:field="*{description}"></textarea>
                   <br>
                   <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="customFile">
+                    <input type="file" name="file" class="custom-file-input" id="customFile" accept="image/jpeg">
                     <label class="custom-file-label" for="customFile">Загрузить изображение</label>
                   </div>
                 </div>

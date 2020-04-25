@@ -23,6 +23,7 @@
                   <li class="nav-item col-3-lg active"><a class="nav-link" th:href="@{/minerals}">Список минералов</a></li>
                   <li class="nav-item col-3-lg"><a class="nav-link" th:href="@{/feedback}">Контакты</a></li>
                   <li class="nav-item col-3-lg"><a class="nav-link" th:href="@{/about}">О нас</a></li>
+                  <li class="nav-item col-3-lg"><a class="nav-link" th:href="@{/login}" th:text="${auth}? 'Выйти' : 'Войти'"></a></li>
                 </ul>
             </div>
 
@@ -30,20 +31,25 @@
     </div>
     <br>
   <div id="mainContent" class="container">
-    <form id="delete" th:action="@{'/minerals/' + ${displayedMineral.getId()}}" th:method="'delete'">
+    <form
+            id="delete"
+            th:action="@{'/minerals/' + ${displayedMineral.getId()}}"
+            method="post"
+            enctype="multipart/form-data"
+            th:if="${auth}"
+    >
+      <input type="hidden" name="method" value="delete">
+      <input type="file" hidden name="file" th:value="null">
       <div class="modal-header">
         <button type="button" class="btn btn-secondary" onclick="document.getElementById('delete').submit()">Удалить</button>
         <button type="button" class="btn btn-primary call-modal-btn" data-toggle="modal" data-target="#updRecord">Редактировать</button>
       </div>
     </form>
     <div class="container mineral-info" th:object="${displayedMineral}">
-      <img th:src="@{'/img/minerals/' + ${displayedMineral.getName()} + '.jpg'} " th:alt="*{getName()}" class="in-text"/>
+      <img th:src="@{'/img/minerals/image_for_' + ${displayedMineral.getId()} + '.jpg'} " th:alt="*{getName()}" class="in-text"/>
       <p>
         <p th:text="*{getDescription()}"></p>
         <p><br><i>Содержится в: </i> <b th:text="*{getOreOfMineral()}"></b></p>
-      </p>
-
-
     </div>
 
     <br>
@@ -72,8 +78,8 @@
       <div class="row">
         <div class="col"></div>
         <div class="col-lg-8 col-md-10 col-sm-10 col-xs-12 text-in-center">
-          <a data-toggle="collapse" href="#researchers">
-            Исследователи
+          <a data-toggle="collapse" href="#researches">
+            Исследования
           </a>
         </div>
         <div class="col"></div>
@@ -81,7 +87,23 @@
       <div class="collapse container" id="researches">
         <div class="card card-body list">
           <ul class="group-list">
-            <li th:each="res : ${researchesList}" class="list-group-item" th:text="${res.getResearchersInRow()}">Теофраст</li>
+            <li th:each="res, itter : ${researchesList}" class="list-group-item">
+              <div class="container">
+                <div class="row">
+                  <div class="col"></div>
+                  <div class="col-lg-8 col-md-10 col-sm-10 col-xs-12 text-in-center">
+                    <a data-toggle="collapse"
+                       th:href="'#research' + ${res.getResearchID()}"
+                       th:text="${res.getResearchersInRow()}">
+                    </a>
+                  </div>
+                  <div class="col"></div>
+                </div>
+              </div>
+              <div class="collapse container" th:id="'research' + ${res.getResearchID()}" th:text="${res.getText()}">
+
+              </div>
+            </li>
           </ul>
         </div>
       </div>
@@ -98,7 +120,14 @@
             </button>
           </div>
           <div class="modal-body">
-            <form th:object="${displayedMineral}" th:action="@{'/minerals/' + ${displayedMineral.getId()}}" th:method="update" id="updForm">
+            <form
+                    th:object="${displayedMineral}"
+                    th:action="@{'/minerals/' + ${displayedMineral.getId()}}"
+                    id="updForm"
+                    method="post"
+                    enctype="multipart/form-data"
+            >
+              <input type="hidden" name="method" value="update">
               <div class="form-group">
                 <label for="mineralNameInput">Название минерала</label>
                 <input type="text" class="form-control" id="mineralNameInput" th:field="*{name}">
@@ -108,7 +137,7 @@
                 <textarea class="form-control" id="mineralDescription" th:field="*{description}"></textarea>
                 <br>
                 <div class="custom-file">
-                  <input type="file" class="custom-file-input" id="customFile">
+                  <input type="file" name="file" class="custom-file-input" id="customFile">
                   <label class="custom-file-label" for="customFile">Загрузить изображение</label>
                 </div>
               </div>
@@ -127,6 +156,7 @@
                 <br>
                 <input id="newOreName" th:field="*{newOreName}">
                 <small id="oresHelp" class="form-text text-muted">Выберите руду из списка или введите новую</small>
+                <a th:href="'/minerals/updateResearches/' + *{id}">Редактировать список исследований</a>
               </div>
 
             </form>

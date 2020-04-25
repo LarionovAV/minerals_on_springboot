@@ -1,7 +1,9 @@
 package com.minerals.minerals_on_springboot.Web;
 
-import com.minerals.minerals_on_springboot.Model.*;
+import com.minerals.minerals_on_springboot.Config.Authentication;
 import com.minerals.minerals_on_springboot.Model.Forms.MineralForm;
+import com.minerals.minerals_on_springboot.Model.Mineral;
+import com.minerals.minerals_on_springboot.Model.Ore;
 import com.minerals.minerals_on_springboot.Repositories.*;
 import com.minerals.minerals_on_springboot.Services.FieldService;
 import com.minerals.minerals_on_springboot.Services.MineralService;
@@ -10,6 +12,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.File;
+import java.io.IOException;
+import java.net.URISyntaxException;
 
 @Controller
 public class MineralsController {
@@ -37,12 +44,14 @@ public class MineralsController {
         model.addAttribute("newMineral", new MineralForm());
         model.addAttribute("oreList", oreRepo.findAll());
         model.addAttribute("mineralsList", mineralRepo.findAll());
-
+        model.addAttribute("auth", Authentication.getAuth().isAuth());
         return "minerals";
     }
 
     @PostMapping("/minerals")
-    public String addMineral(@ModelAttribute("newMineral") MineralForm mineral){
+    public String addMineral(
+            @ModelAttribute("newMineral") MineralForm mineral,
+            @RequestParam("file") MultipartFile file) throws IOException, URISyntaxException {
 
         Ore ore = null;
         if (mineral.getOreOfMineral().isEmpty()) {
@@ -58,6 +67,16 @@ public class MineralsController {
             if (!field.isEmpty())
                 fieldService.create(field, added);
         }
+        if (file != null) {
+            file.transferTo(
+                    new File(
+                            getClass().getClassLoader().
+                                    getResource("static/img/minerals").getPath() +
+                                    "/image_for_" + added.getMinID() + ".jpg"
+                    )
+            );
+        }
+
         return "redirect:minerals";
     }
 
@@ -65,9 +84,15 @@ public class MineralsController {
         mineralService.delete(id);
         return "redirect:/minerals";
     }
-    public String updateMineral(MineralForm form){
-        String ore;
-
+    public String updateMineral(MineralForm form, MultipartFile file) throws IOException {
+        if (file != null)
+            file.transferTo(
+                    new File(
+                            getClass().getClassLoader().
+                                    getResource("static/img/minerals").getPath() +
+                                    "/image_for_" + form.getId() + ".jpg"
+                    )
+            );
         mineralService.update(form);
 
         return "redirect:/minerals/" + form.getId();
@@ -83,6 +108,7 @@ public class MineralsController {
         model.addAttribute("fieldsList", fieldRepo.findAllByMineral(displayedMineral));
         model.addAttribute("researchesList", researchRepo.findByMineral(displayedMineral));
         model.addAttribute("oreList", oreRepo.findAll());
+        model.addAttribute("auth", Authentication.getAuth().isAuth());
 
         return "singleMineralInfo";
     }
@@ -90,17 +116,16 @@ public class MineralsController {
     @PostMapping(value = "/minerals/{id}")
     public String actionWithSingleMineral(
             @PathVariable("id") Integer id,
-            @RequestBody String action,
+            @RequestParam("method") String action,
+            @RequestParam("file") MultipartFile file,
             @ModelAttribute(name = "displayedMineral") MineralForm form
-                                         ){
+                                         ) throws IOException {
 
-        if (action.contains("_method=delete"))
+        if (action.equals("delete"))
             return deleteMineral(id);
-        else if (action.contains("_method=update"))
-            return updateMineral(form);
+        else if (action.equals("update"))
+            return updateMineral(form, file);
 
         return "redirect:/minerals";
     }
-
-
 }

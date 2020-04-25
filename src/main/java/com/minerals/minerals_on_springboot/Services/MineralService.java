@@ -12,6 +12,8 @@ import com.minerals.minerals_on_springboot.Repositories.ResearchRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -85,6 +87,11 @@ public class MineralService {
 
     public void delete(Integer id){
         mineralRepo.deleteById(id);
+        new File(
+                getClass().getClassLoader().
+                                getResource("static/img/minerals").getPath() +
+                                "/image_for_" + id + ".jpg").delete();
+
     }
 
 

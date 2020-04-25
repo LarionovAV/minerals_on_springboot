@@ -1,6 +1,7 @@
 package com.minerals.minerals_on_springboot.Model;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -22,7 +23,7 @@ public class Research {
             name = "research_link",
             joinColumns  = {@JoinColumn(name = "researchID")},
             inverseJoinColumns ={@JoinColumn(name = "researcherID")})
-    private Set<Researcher> researchers;
+    private List<Researcher> researchers;
 
     public Research() {
     }
@@ -51,11 +52,11 @@ public class Research {
         this.mineral = mineral;
     }
 
-    public Set<Researcher> getResearchers() {
+    public List<Researcher> getResearchers() {
         return researchers;
     }
 
-    public void setResearchers(Set<Researcher> researchers) {
+    public void setResearchers(List<Researcher> researchers) {
         this.researchers = researchers;
     }
 
